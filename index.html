@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="lyt-main">
+        <div class="main-wrap">
+            <div class="head-wrap">
+                <h1 class="title">Please select a mode</h1>
+                <h2 class="acknowledge">Level Complete!!!</h2>
+                <div class="lyt-label-value">
+                    <div class="label-value">
+                        <span class="label">Time</span>
+                        <div class="value">
+                            <span class="hours">00</span>:<span class="min">00</span>:<span class="sec">00</span>
+                        </div>
+                    </div>
+                    <div class="label-value">
+                        <span class="label">Moves</span>
+                        <div class="value"><span class="moves">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-wrap">
+                <ul class="list"></ul>
+            </div>
+            <div class="act-wrap">
+                <button class="btn-click" onclick="tileCreation(3,3)">Easy</button>
+                <button class="btn-click" onclick="tileCreation(4,4)">Medium</button>
+                <button class="btn-click" onclick="tileCreation(5,5)">Difficult</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

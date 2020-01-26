@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+li,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.act-wrap {
+    padding: 2rem 0rem;
+    text-align: center;
+}
+
+body {
+    color: #333;
+    background-color: #eeede9;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.lyt-main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.head-wrap {
+    position: relative;
+    padding-top: 3rem;
+}
+
+.lyt-label-value {
+    width: 60%;
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-in;
+    margin-top: 2.5rem;
+}
+
+.lyt-label-value.active {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100rem;
+}
+
+.title,
+.acknowledge {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.title.active,
+.acknowledge.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.label-value {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    display: flex;
+}
+
+.label-value .label,
+.label-value .value {
+    width: 50%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.label-value .value {
+    font-weight: 300;
+    padding-left: 1.5rem;
+}
+
+.label-value .label {
+    padding-right: 1.5rem;
+}
+
+.main-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 40rem;
+}
+
+button {
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px #a2a2a2;
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+button:hover,
+button.active {
+    background: #3498db;
+    color: #fff;
+}
+
+button:last-of-type {
+    margin-right: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.tile-wrap {
+    padding: 1.5rem 0;
+    margin: 0 -1.5rem;
+}
+
+.list {
+    overflow: hidden;
+    display: inline-block;
+    max-width: 42rem;
+    margin: 0 auto;
+    max-height: 0;
+    transition: max-height 0.6s ease-in;
+}
+
+.list.active {
+    max-height: 80rem;
+    transition: max-height 0.6s ease-in;
+}
+
+.list.complete .tile-item {
+    pointer-events: none;
+}
+
+.tile-item {
+    min-height: 7.4rem;
+    padding: 1.5rem;
+    float: left;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.tile {
+    background: #f18888;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #d9d9d9;
+    padding: 1rem 0rem;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    cursor: pointer;
+}
